@@ -1,0 +1,31 @@
+ALGORITHM read_a_sentence
+VAR
+   a:=INTEGER=0;
+   b:=INTEGER=0;
+   c:=INTEGER=0;
+   i:=INTEGER=0;
+   s:=STRING;
+BEGIN
+    READ(s)
+    WHILE (i<s.length AND s[i]<>".") DO
+    
+    IF (s[i]="a" OR s[i]="e" OR  s[i]="i" OR s[i]="o" OR s[i ="u"]) THEN
+        c:= c+1;
+    END_IF
+    
+    IF (s[i]<>"." AND s[i] <>" ") THEN
+        a:=a+1;
+    
+    END_IF
+    
+    IF (if i=o OR s[i+1]=" ") THEN
+        b:=b+1;
+    END_IF
+    
+    i:=i+1
+    
+    END_WHILE
+    WRITE('vowels',c)
+    WRITE('char',a)
+    WRITE('WORDS',b)
+END
